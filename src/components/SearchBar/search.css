@@ -1,0 +1,19 @@
+.search-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+input {
+    background-color: #10141E;
+    width: 100%;
+    padding: 0.5rem 0;
+    color: #FFFFFF;
+    border: none;
+    outline: 1px solid #10141E;
+    caret-color: #FC4747;
+}
+
+input:focus {
+    border-bottom: 1px solid white;
+}

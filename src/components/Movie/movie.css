@@ -1,0 +1,130 @@
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    width: calc(50% - 0.6rem); /* display 2 items/row; 1.2rem is the gap /2 = 0.6 */
+    position: relative;
+}
+
+.trending-container {
+    display: inline-block;
+    width: 55vw; 
+    position: relative;
+    margin-right: 1.5rem;
+    overflow-y: hidden;
+}
+
+@media only screen and (min-width: 43.75rem) {
+    .movie-container {
+        width: calc(33.3% - 0.8rem); /* 3 items/ row; 2.4rem are 2 gaps / 3 = 0.8 */
+    }
+}
+
+@media only screen and (min-width: 62.5rem) {
+    .movie-container {
+        width: calc(25% - 0.9rem); /* 4 items/ row; 3.6rem are 3 gaps / 4 = 0.9 */
+    }
+    .trending-container {
+        width: 33vw;
+    }
+}
+
+.movie-img {
+    border-radius: 0.7rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.trending-text {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.movie-details {
+    display: flex;
+    gap: 0.4rem;
+    opacity: 0.75;
+}
+
+.bookmark-icon {
+    background-color: #10141E;
+    width: fit-content;
+    height: fit-content;
+    opacity: 0.5;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    z-index: 10;
+}
+
+svg {
+    transition: all 0.4s ease-out;
+}
+
+.not-bookmarked {
+    color: transparent;
+    stroke:#FFF;
+}
+.bookmarked {
+    color: white;
+}
+.bookmark-icon:hover {
+    background-color: white;
+}
+.bookmark-icon:hover > .not-bookmarked {
+    stroke: black;
+}
+.bookmark-icon:hover > .bookmarked {
+    color: black;
+}
+
+/* create the hover effect for movie img: darker background + play button */
+.img-container {
+    position: relative;
+}
+
+.img-container:before, 
+.play-btn {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.img-container:before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.play-btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1.75rem;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 100%, 0.25);
+    z-index: 3;
+}
+
+.img-container:hover .play-btn,
+.img-container:hover::before {
+    opacity: 1;
+}
+
+.play-btn:hover {
+    background-color: hsla(0, 0%, 100%, 0.4);
+}

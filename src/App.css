@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* General styles */
+html, 
+input {
+	font-family: 'Outfit', sans-serif;
+	background-color: #10141E;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+	max-width: 1500px;
+	margin: auto;
+	-webkit-tap-highlight-color: transparent;
+	--heading-l: 2rem;
+	--heading-m: 1.5rem;
+	--heading-s: 1.5rem;
+	--heading-s-font-weight: 500;
+	--heading-xs: 1.125rem;
+	--heading-xs-font-weight: 500;
+	--heading-xxs: 0.875rem;
+	--heading-xxs-font-weight: 500;
+	--body-m: 0.938rem;
+	--body-s: 0.813rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* typography */
+.heading-l {
+    font-size: var(--heading-m);
+}
+.heading-m {
+    font-size: var(--heading-xs);
+}
+.heading-s {
+    font-size: var(--heading-xs);
+    font-weight: var(--heading-s-font-weight);
+    line-height: 1.5;
+}
+.heading-xs {
+    font-size: var(--heading-xxs);
+    font-weight: var(--heading-xs-font-weight);
+    line-height: 1.5;
+}
+.body-m {
+    font-size: var(--body-m);
+}
+.body-s {
+    font-size: var(--body-s);
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (min-width: 37.5rem) {
+    .heading-l {
+        font-size: var(--heading-l);
+    }
+    .heading-m {
+        font-size: var(--heading-m);
+    }
+    .heading-s {
+        font-size: var(--heading-s);
+        font-weight: var(--heading-s-font-weight);
+    }
+    .heading-xs {
+        font-size: var(--heading-xs);
+        font-weight: var(--heading-xs-font-weight);
+    }
+    .body-m {
+        font-size: var(--body-m);
+    }
+    .body-s {
+        font-size: var(--body-s);
+    }    
 }
+/* end - typography */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    margin: 1.8rem 0;
+}
+.search-container {
+	padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+}
+.list-container {
+	padding: 1.5rem;
+}
+.trending-section {
+	padding-left: 1.5rem;
 }
