@@ -24,6 +24,7 @@ function HomeTemplate() {
         if (items.length > 0) {
             setData(items);
         } else {
+            console.log('get');
             getItemsData();
         }
     }, []);
@@ -46,7 +47,7 @@ function HomeTemplate() {
 
     async function getItemsData() {
         try {
-            const requestUrl = `/data.json`;
+            const requestUrl = `/entertainment-app/data.json`;
             const response = await fetch(requestUrl, {
                 method: 'GET',
             });
